@@ -1,0 +1,63 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hide menu by default */
+}
+
+.menu li {
+    margin: 0;
+    padding: 10px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-icon {
+    display: none; /* Hide hamburger icon by default */
+    cursor: pointer;
+}
+
+/* Show menu items on mobile and hide on larger screens */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show hamburger icon on mobile */
+    }
+
+    .menu.active {
+        display: block; /* Show menu when active class is added */
+        background-color: #333;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+    .menu {
+        display: flex; /* Show menu as a horizontal bar */
+    }
+
+    .menu li {
+        margin: 0 10px; /* Space out menu items */
+    }
+
+    .menu-icon {
+        display: none; /* Hide hamburger icon on larger screens */
+    }
+}
